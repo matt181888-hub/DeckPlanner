@@ -1,0 +1,29 @@
+# Maven build output
+target/
+
+# IDE — IntelliJ / Android Studio
+.idea/
+*.iml
+out/
+
+# IDE — Eclipse / VS Code / Cursor (Java)
+.classpath
+.project
+.settings/
+.factorypath
+.vscode/
+
+# Compiled classes (outside target)
+*.class
+
+# Logs and OS
+*.log
+.DS_Store
+Thumbs.db
+
+# Local env / secrets (if added later)
+.env
+*.local
+
+# Personal planning doc (not for GitHub)
+DEVELOPMENT_PLAN.md
