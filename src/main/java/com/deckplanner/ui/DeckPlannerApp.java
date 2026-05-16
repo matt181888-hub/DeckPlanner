@@ -2,22 +2,30 @@ package com.deckplanner.ui;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
- * JavaFX entry point.
+ * JavaFX entry point — bootstraps the runtime and shows the primary window.
  */
-public class DeckPlannerApp extends Application {
+public class DeckPlannerApp extends Application 
+{
+
+    private static final int WINDOW_WIDTH = 1280;
+    private static final int WINDOW_HEIGHT = 720;
 
     @Override
-    public void start(Stage stage) {
+    public void start(Stage stage) 
+    {
         stage.setTitle("Deck Planner");
-        stage.setScene(new Scene(new StackPane(), 640, 480));
+
+        MainWindowView main_window = new MainWindowView();
+        Scene scene = new Scene(main_window.get_root(), WINDOW_WIDTH, WINDOW_HEIGHT);
+        stage.setScene(scene);
         stage.show();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         launch(args);
     }
 }
